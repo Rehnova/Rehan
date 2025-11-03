@@ -203,6 +203,13 @@ h6 {
   }
 }
 
+@media (max-width: 780px){
+  .index-page .header{
+    display: none;
+    background: transparent;
+  }
+}
+
 /* Index Page Header
 ------------------------------*/
 .index-page .header {
@@ -382,11 +389,13 @@ h6 {
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
-    font-size: 28px;
+    font-size: 30px;
     line-height: 0;
+    background: rgb(0, 119, 255, 0.5);
+    border-radius: 10px;
     margin-right: 10px;
     cursor: pointer;
-    transition: color 0.3s;
+    transition: all 0.3s ease;
   }
 
   .navmenu {
@@ -854,6 +863,7 @@ section,
 .hero {
   width: 100%;
   min-height: 80vh;
+  background: radial-gradient(circle at top, #0d67ce 0%, transparent);
   position: relative;
   padding: 120px 0 60px 0;
   display: flex;
@@ -919,6 +929,26 @@ section,
 
 .hero .animated {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+@media (min-width: 768px)and (max-width: 991px){
+  
+  .hero .container .row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .animated{
+    height: 400px;
+  }
+
+  .d-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media (max-width: 640px) {
