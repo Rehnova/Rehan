@@ -12,30 +12,44 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Open Sans",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", "orbitron", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Jost",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-font: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", "orbitron", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Jost", sans-serif;
+  --para-font: "Exo 2", sans-serif;
+  --nav-font: "Poppins", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #09143c; /* Background color for the entire website, including individual sections */
-  --background-color-2: #0458b8; /* Background color for the entire website, including individual sections */
-  --default-color: #ffffff; /* Default color used for the majority of the text content across the entire website */
-  --heading-color:  #47b2e4; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #47b2e4; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+:root {
+  --background-color: #09143c;
+  /* Background color for the entire website, including individual sections */
+  --background-color-2: #0458b8;
+  /* Background color for the entire website, including individual sections */
+  --default-color: #ffffff;
+  /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #47b2e4;
+  /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #47b2e4;
+  /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff;
+  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff;
+  /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #ffffff;  /* The default color of the main navmenu links */
-  --nav-hover-color: #47b2e4; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #47b2e4; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #ffffff;
+  /* The default color of the main navmenu links */
+  --nav-hover-color: #47b2e4;
+  /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff;
+  /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff;
+  /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #444444;
+  /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #47b2e4;
+  /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -85,6 +99,12 @@ h5,
 h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
+}
+
+
+p {
+  font-family: var(--para-font);
+
 }
 
 /* PHP Email Form Messages
@@ -203,8 +223,8 @@ h6 {
   }
 }
 
-@media (max-width: 780px){
-  .index-page .header{
+@media (max-width: 780px) {
+  .index-page .header {
     display: none;
     background: transparent;
   }
@@ -863,26 +883,89 @@ section,
 .hero {
   width: 100%;
   min-height: 80vh;
-  background: radial-gradient(circle at top, #0d67ce 0%, transparent);
+  background: radial-gradient(circle at top, #0d67ce 10%, transparent);
   position: relative;
-  padding: 120px 0 60px 0;
+  padding: 120px 0;
   display: flex;
+  align-items: center;
+}
+
+
+.hero .row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
 .hero h1 {
   margin: 0;
-  font-size: 48px;
-  font-weight: 700;
+  font-size: 38px;
+  font-weight: 500;
+  padding: 0;
+  color: #47b2e4;
   line-height: 56px;
+  text-align: center;
 }
+
+#main-head {
+  font-size: 50px;
+  background: linear-gradient(90deg, rgb(91, 121, 255), #a3caf7, rgb(72, 106, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+#subhead {
+  font-size: 42px;
+  background: linear-gradient(90deg, rgb(91, 121, 255), #a3caf7, rgb(72, 106, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@media (max-width: 780px) {
+  #main-head {
+    font-size: 38px;
+  }
+
+  #subhead {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 640px)and (max-width: 780px) {
+  #subhead {
+    font-size: 38px;
+  }
+}
+
 
 .hero p {
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   margin: 5px 0 30px 0;
   font-size: 22px;
   line-height: 1.3;
-  font-weight: 600;
+  font-weight: 400;
+  padding: 0;
+  text-align: center;
+}
+
+#para {
+  color: #47b2e4;
+  font-size: 20px;
+}
+
+@media (max-width: 780px) {
+  #para{
+    font-size: 15px;
+  }
+}
+
+.hero .d-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero .btn-get-started {
@@ -931,20 +1014,23 @@ section,
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
 
-@media (min-width: 768px)and (max-width: 991px){
-  
-  .hero .container .row{
+@media (min-width: 768px)and (max-width: 991px) {
+
+
+
+  .hero .container .row {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
   }
 
-  .animated{
+  .animated {
     height: 400px;
   }
 
-  .d-flex{
+  .d-flex {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -952,24 +1038,29 @@ section,
 }
 
 @media (max-width: 640px) {
-.hero .d-flex{
-justify-content: center;
-  display: flex;
-  align-items: center;
-}
+
+  .hero {
+    padding: 100px 0;
+  }
+
+  .hero .d-flex {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
 
   .hero h1 {
     font-size: 28px;
     line-height: 36px;
-  text-align: center;
-  
-}
+    text-align: center;
 
-.hero p {
-  font-size: 18px;
-  line-height: 24px;
-  margin-bottom: 30px;
-  text-align: center;
+  }
+
+  .hero p {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+    text-align: center;
   }
 
   .hero .btn-get-started,
@@ -992,8 +1083,8 @@ justify-content: center;
 /*--------------------------------------------------------------
 # Clients Section
 --------------------------------------------------------------*/
-.clients{
-  background: linear-gradient(to bottom, transparent, transparent,rgba(7, 71, 182, 0.5));
+.clients {
+  background: linear-gradient(to bottom, transparent, transparent, #001f5380);
 }
 
 .clients {
@@ -1010,7 +1101,8 @@ justify-content: center;
 
 .clients .swiper-slide img {
   transition: 0.3s;
-  padding: 0 10px;
+  height: 40px;
+  width: auto;
 }
 
 .clients .swiper-slide img:hover {
@@ -1071,9 +1163,10 @@ justify-content: center;
 /*--------------------------------------------------------------
 # Why Us Section
 --------------------------------------------------------------*/
-.why-us{
-  background:color-mix(in srgb, var(--background-color-2) 25% ,transparent 100%)  ;
+.why-us {
+  background: color-mix(in srgb, var(--background-color-2) 25%, transparent 100%);
 }
+
 .why-us {
   padding: 30px 0;
 }
@@ -1088,7 +1181,7 @@ justify-content: center;
 }
 
 .why-us .faq-container .faq-item {
-  background:linear-gradient(to bottom,  rgb(4, 88, 184),rgb(4, 88, 184, 0.5), transparent);
+  background: linear-gradient(to bottom, rgb(4, 88, 184), rgb(4, 88, 184, 0.5), transparent);
   position: relative;
   padding: 20px;
   margin-bottom: 20px;
@@ -1105,7 +1198,7 @@ justify-content: center;
   font-weight: 500;
   font-size: 17px;
   line-height: 24px;
-      color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.6);
 
   margin: 0 30px 0 0;
   transition: 0.3s;
@@ -1113,7 +1206,7 @@ justify-content: center;
 }
 
 .why-us .faq-container .faq-item h3 span {
-    color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.3);
 
   padding-right: 5px;
   font-weight: 600;
@@ -1242,8 +1335,8 @@ justify-content: center;
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
-.services{
- background:color-mix(in srgb, var(--background-color-2) 25% ,transparent 100%)  ;
+.services {
+  background: color-mix(in srgb, var(--background-color-2) 25%, transparent 100%);
 }
 
 .services .service-item {
@@ -1261,7 +1354,7 @@ justify-content: center;
 }
 
 .services .service-item .icon i {
-    color: #09143c;
+  color: #09143c;
 
   font-size: 36px;
   transition: 0.3s;
@@ -1274,7 +1367,7 @@ justify-content: center;
 }
 
 .services .service-item h4 a {
-    color: rgb(9, 20, 60, 0.9) ;
+  color: rgb(9, 20, 60, 0.9);
 
   transition: ease-in-out 0.3s;
 }
@@ -1282,7 +1375,7 @@ justify-content: center;
 .services .service-item p {
   line-height: 24px;
   font-size: 14px;
-    color: rgb(9, 20, 60, 0.5) ;
+  color: rgb(9, 20, 60, 0.5);
 
   margin-bottom: 0;
 }
@@ -1378,7 +1471,7 @@ justify-content: center;
   align-items: center;
   margin-bottom: 12px;
   color: #09143c;
-  
+
 }
 
 .work-process .steps-features .feature-item:last-child {
@@ -1446,89 +1539,89 @@ justify-content: center;
 
 
 .motion {
-        overflow-x: hidden;
-        height: min-content;
-        margin: 4rem 0rem;
+  overflow-x: hidden;
+  height: min-content;
+  margin: 4rem 0rem;
 
-    }
+}
 
-    @keyframes slide {
-        from {
-            transform: translateX(0);
-        }
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
 
-        to {
-            transform: translateX(-100%);
-        }
+  to {
+    transform: translateX(-100%);
+  }
 
-    }
+}
 
-    .motion .slider-wrapper {
-        overflow: hidden;
-        white-space: nowrap;
-        position: relative;
-    }
+.motion .slider-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
 
-    .motion .slider-wrapper:after {
-        position: absolute;
-        right: 0;
-        top: 0;
-        height: 100%;
-        width: 400px;
-        background: linear-gradient(to right, rgb(255, 255, 255, 0), #09143c);
-        content: "";
-        z-index: 2;
-    }
+.motion .slider-wrapper:after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 400px;
+  background: linear-gradient(to right, rgb(255, 255, 255, 0), #09143c);
+  content: "";
+  z-index: 2;
+}
 
-    .motion .slider-wrapper:before {
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 400px;
-        background: linear-gradient(to left, rgb(255, 255, 255, 0), #09143c);
-        content: "";
-        z-index: 2;
-    }
-
-
-    .motion .slider {
-        animation: 20s slide infinite linear;
-        display: inline-block;
-    }
-
-    .slider img {
-        height: 150px;
-        margin: 0 3rem;
-        transition: all 0.3s ease;
-    }
-
-    .slider img:hover {
-        transform: scale(1.01);
-    }
-
-    @media (max-width: 768px) {
-        .motion {
-            margin-top: 20px;
-        }
+.motion .slider-wrapper:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 400px;
+  background: linear-gradient(to left, rgb(255, 255, 255, 0), #09143c);
+  content: "";
+  z-index: 2;
+}
 
 
-        .motion .slider img {
-            margin: 0 2rem;
-            height: 100px;
-        }
+.motion .slider {
+  animation: 20s slide infinite linear;
+  display: inline-block;
+}
+
+.slider img {
+  height: 150px;
+  margin: 0 3rem;
+  transition: all 0.3s ease;
+}
+
+.slider img:hover {
+  transform: scale(1.01);
+}
+
+@media (max-width: 768px) {
+  .motion {
+    margin-top: 20px;
+  }
 
 
-        .motion .slider-wrapper:before,
-        .motion .slider-wrapper:after {
-            width: 50px;
-            height:100px;
-        }
+  .motion .slider img {
+    margin: 0 2rem;
+    height: 100px;
+  }
 
-        .slider img {
-            height: 10vh;
-        }
-    }
+
+  .motion .slider-wrapper:before,
+  .motion .slider-wrapper:after {
+    width: 50px;
+    height: 100px;
+  }
+
+  .slider img {
+    height: 10vh;
+  }
+}
 
 
 /*--------------------------------------------------------------
@@ -1829,13 +1922,13 @@ justify-content: center;
 # Pricing Section
 --------------------------------------------------------------*/
 
-.pricing{
-  background:color-mix(in srgb, var(--background-color-2) 25% ,transparent 100%)  ;
+.pricing {
+  background: color-mix(in srgb, var(--background-color-2) 25%, transparent 100%);
 
 }
 
 .pricing .pricing-item {
-  background: radial-gradient(circle at top , #0077ff 20%, transparent, transparent);
+  background: radial-gradient(circle at top, #0077ff 20%, transparent, transparent);
   box-shadow: 0 3px 20px -2px rgba(0, 0, 0, 0.1);
   border-top: 4px solid var(--background-color);
   padding: 60px 40px;
@@ -2049,8 +2142,8 @@ justify-content: center;
 /*--------------------------------------------------------------
 # Faq 2 Section
 --------------------------------------------------------------*/
-.faq-2{
-  background:color-mix(in srgb, var(--background-color-2) 25% ,transparent 100%)  ;
+.faq-2 {
+  background: color-mix(in srgb, var(--background-color-2) 25%, transparent 100%);
 
 }
 
@@ -2059,7 +2152,7 @@ justify-content: center;
 }
 
 .faq-2 .faq-container .faq-item {
-    background:linear-gradient(to bottom,  rgb(4, 88, 184),rgb(4, 88, 184, 0.5), transparent);
+  background: linear-gradient(to bottom, rgb(4, 88, 184), rgb(4, 88, 184, 0.5), transparent);
   position: relative;
   padding: 20px;
   margin-bottom: 20px;
@@ -2303,7 +2396,7 @@ justify-content: center;
 
 
 .contact .info-wrap {
-    background:transparent ;
+  background: transparent;
 
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   border-top: 3px solid var(--accent-color);
